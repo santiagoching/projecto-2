@@ -1,4 +1,4 @@
-controller.up.onEvent(ControllerButtonEvent.Released, function () {
+controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
     animation.runImageAnimation(
     hero,
     [img`
@@ -13,14 +13,14 @@ controller.up.onEvent(ControllerButtonEvent.Released, function () {
         . f d d d d d d d d d d d d f . 
         . f d d d d d d d d d d d d f . 
         . f d d d d d d d d d d d d f . 
-        . f d d f d d d d d d f d d f . 
-        . f d d f d d d d d d f d d f . 
+        . f d d d d d d d d d d d d f . 
         . f d d f f f f f f f f d d f . 
+        . f d d f d d f f d d f d d f . 
         . f f f f d d f f d d f f f f . 
         . . . . f d d f f d d f . . . . 
         `],
     200,
-    false
+    true
     )
 })
 controller.down.onEvent(ControllerButtonEvent.Released, function () {
@@ -60,6 +60,132 @@ controller.down.onEvent(ControllerButtonEvent.Released, function () {
         . . . f d d f f f f f d d d f . 
         . . . f d d d d d d d f f f . . 
         . . . . f d d f f d d f . . . . 
+        `],
+    200,
+    false
+    )
+})
+controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
+    animation.runImageAnimation(
+    hero,
+    [img`
+        . . . . . . f f f f . . . . . . 
+        . . . . f f d d d d f f . . . . 
+        . . . f d d d d d d d d f . . . 
+        . . f d d d d d d d d d d f . . 
+        . . f d f f f d d d d d d f . . 
+        . . f d d d d d d d d d d f . . 
+        . . f 1 1 d d d d d d d f f . . 
+        . f f 1 1 d d d d d f f f f . . 
+        . f d f f f f f f f d d d f . . 
+        . f d d d d d d d d d d d f . . 
+        . f d d f d d d d d d d d f . . 
+        . f f d f d d d d d d d d f . . 
+        . f d f f d d d d d d d f f . . 
+        . f d d d d d d d d d d f . . . 
+        . . f f f d d d d d d d f . . . 
+        . . . . f d d f f f f f . . . . 
+        `,img`
+        . . . . . . f f f f . . . . . . 
+        . . . . f f d d d d f f . . . . 
+        . . . f d d d d d d d d f . . . 
+        . . f d d d d d d d d d d f . . 
+        . . f d f f f d d d d d d f . . 
+        . . f d d d d d d d d d d f . . 
+        . . f 1 1 d d d d d d d f f . . 
+        . f f 1 1 d d d d d f f f f . . 
+        . f d f f f f f f f d d d f . . 
+        . f d d d d d d d d d d d f . . 
+        . f d d f d d d d d d d d f . . 
+        . f f d f d d d d d d d d f . . 
+        . f d f f d d d d d d d f f . . 
+        . f d d d d d d d d d d f . . . 
+        . . f f f d d d d d d d f . . . 
+        . . . . f f f f f d d f . . . . 
+        `],
+    200,
+    true
+    )
+})
+controller.right.onEvent(ControllerButtonEvent.Released, function () {
+    animation.runImageAnimation(
+    hero,
+    [img`
+        . . . . . . f f f f . . . . . . 
+        . . . . f f d d d d f f . . . . 
+        . . . f d d d d d d d d f . . . 
+        . . f d d d d d d d d d d f . . 
+        . . f d d d d d d f f f d f . . 
+        . . f d d d d d d d d d d f . . 
+        . . f f d d d d d d d 1 1 f . . 
+        . . . f f f d d d d d 1 1 f f . 
+        . . f d d d f f f f f f f d f . 
+        . . f d d d d d d d d d d d f . 
+        . . f d d d d d d d d f d d f . 
+        . . f d d d d d d d d f d f f . 
+        . . f f d d d d d d d f f d f . 
+        . . . f d d d d d d d d d d f . 
+        . . . f d d d d d d d f f f . . 
+        . . . . f f f f f d d f . . . . 
+        `,img`
+        . . . . . . f f f f . . . . . . 
+        . . . . f f d d d d f f . . . . 
+        . . . f d d d d d d d d f . . . 
+        . . f d d d d d d d d d d f . . 
+        . . f d d d d d d f f f d f . . 
+        . . f d d d d d d d d d d f . . 
+        . . f f d d d d d d d 1 1 f . . 
+        . . f f f f d d d d d 1 1 f f . 
+        . . f d d d f f f f f f f d f . 
+        . . f d d d d d d d d d d d f . 
+        . . f d d d d d d d d f d d f . 
+        . . f d d d d d d d d f d f f . 
+        . . f f d d d d d d d f f d f . 
+        . . . f d d d d d d d d d d f . 
+        . . . f d d d d d d d f f f . . 
+        . . . . f d d f f f f f . . . . 
+        `],
+    200,
+    false
+    )
+})
+controller.left.onEvent(ControllerButtonEvent.Released, function () {
+    animation.runImageAnimation(
+    hero,
+    [img`
+        . . . . . . f f f f . . . . . . 
+        . . . . f f d d d d f f . . . . 
+        . . . f d d d d d d d d f . . . 
+        . . f d d d d d d d d d d f . . 
+        . . f d f f f d d d d d d f . . 
+        . . f d d d d d d d d d d f . . 
+        . . f 1 1 d d d d d d d f f . . 
+        . f f 1 1 d d d d d f f f . . . 
+        . f d f f f f f f f d d d f . . 
+        . f d d d d d d d d d d d f . . 
+        . f d d f d d d d d d d d f . . 
+        . f f d f d d d d d d d d f . . 
+        . f d f f d d d d d d d f f . . 
+        . f d d d d d d d d d d f . . . 
+        . . f f f d d d d d d d f . . . 
+        . . . . f d d f f f f f . . . . 
+        `,img`
+        . . . . . . f f f f . . . . . . 
+        . . . . f f d d d d f f . . . . 
+        . . . f d d d d d d d d f . . . 
+        . . f d d d d d d d d d d f . . 
+        . . f d f f f d d d d d d f . . 
+        . . f d d d d d d d d d d f . . 
+        . . f 1 1 d d d d d d d f f . . 
+        . f f 1 1 d d d d d f f f f . . 
+        . f d f f f f f f f d d d f . . 
+        . f d d d d d d d d d d d f . . 
+        . f d d f d d d d d d d d f . . 
+        . f f d f d d d d d d d d f . . 
+        . f d f f d d d d d d d f f . . 
+        . f d d d d d d d d d d f . . . 
+        . . f f f d d d d d d d f . . . 
+        . . . . f f f f f d d f . . . . 
         `],
     200,
     false
@@ -107,49 +233,15 @@ controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
     true
     )
 })
-controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
-    animation.runImageAnimation(
-    hero,
-    [img`
-        . . . . . . f f f f . . . . . . 
-        . . . . f f d d d d f f . . . . 
-        . . . f d d d d d d d d f . . . 
-        . . f d d d d d d d d d d f . . 
-        . . f d f f f d d d d d d f . . 
-        . . f d d d d d d d d d d f . . 
-        . . f 1 1 d d d d d d d f f . . 
-        . f f 1 1 d d d d d f f f f . . 
-        . f d f f f f f f f d d d f . . 
-        . f d d d d d d d d d d d f . . 
-        . f d d f d d d d d d d d f . . 
-        . f f d f d d d d d d d d f . . 
-        . f d f f d d d d d d d f f . . 
-        . f d d d d d d d d d d f . . . 
-        . . f f f d d d d d d d f . . . 
-        . . . . f d d f f f f f . . . . 
-        `,img`
-        . . . . . . f f f f . . . . . . 
-        . . . . f f d d d d f f . . . . 
-        . . . f d d d d d d d d f . . . 
-        . . f d d d d d d d d d d f . . 
-        . . f d f f f d d d d d d f . . 
-        . . f d d d d d d d d d d f . . 
-        . . f 1 1 d d d d d d d f f . . 
-        . f f 1 1 d d d d d f f f f . . 
-        . f d f f f f f f f d d d f . . 
-        . f d d d d d d d d d d d f . . 
-        . f d d f d d d d d d d d f . . 
-        . f f d f d d d d d d d d f . . 
-        . f d f f d d d d d d d f f . . 
-        . f d d d d d d d d d d f . . . 
-        . . f f f d d d d d d d f . . . 
-        . . . . f f f f f d d f . . . . 
-        `],
-    200,
-    true
-    )
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Projectile, function (sprite, otherSprite) {
+    otherSprite.destroy(effects.confetti, 100)
+    music.baDing.play()
+    info.changeScoreBy(1)
+    if (tiempo > 500) {
+        tiempo += -500
+    }
 })
-controller.left.onEvent(ControllerButtonEvent.Released, function () {
+controller.up.onEvent(ControllerButtonEvent.Released, function () {
     animation.runImageAnimation(
     hero,
     [img`
@@ -157,35 +249,18 @@ controller.left.onEvent(ControllerButtonEvent.Released, function () {
         . . . . f f d d d d f f . . . . 
         . . . f d d d d d d d d f . . . 
         . . f d d d d d d d d d d f . . 
-        . . f d f f f d d d d d d f . . 
         . . f d d d d d d d d d d f . . 
-        . . f 1 1 d d d d d d d f f . . 
-        . f f 1 1 d d d d d f f f . . . 
-        . f d f f f f f f f d d d f . . 
-        . f d d d d d d d d d d d f . . 
-        . f d d f d d d d d d d d f . . 
-        . f f d f d d d d d d d d f . . 
-        . f d f f d d d d d d d f f . . 
-        . f d d d d d d d d d d f . . . 
-        . . f f f d d d d d d d f . . . 
-        . . . . f d d f f f f f . . . . 
-        `,img`
-        . . . . . . f f f f . . . . . . 
-        . . . . f f d d d d f f . . . . 
-        . . . f d d d d d d d d f . . . 
         . . f d d d d d d d d d d f . . 
-        . . f d f f f d d d d d d f . . 
         . . f d d d d d d d d d d f . . 
-        . . f 1 1 d d d d d d d f f . . 
-        . f f 1 1 d d d d d f f f f . . 
-        . f d f f f f f f f d d d f . . 
-        . f d d d d d d d d d d d f . . 
-        . f d d f d d d d d d d d f . . 
-        . f f d f d d d d d d d d f . . 
-        . f d f f d d d d d d d f f . . 
-        . f d d d d d d d d d d f . . . 
-        . . f f f d d d d d d d f . . . 
-        . . . . f f f f f d d f . . . . 
+        . f f d d d d d d d d d d f f . 
+        . f d d d d d d d d d d d d f . 
+        . f d d d d d d d d d d d d f . 
+        . f d d d d d d d d d d d d f . 
+        . f d d f d d d d d d f d d f . 
+        . f d d f d d d d d d f d d f . 
+        . f d d f f f f f f f f d d f . 
+        . f f f f d d f f d d f f f f . 
+        . . . . f d d f f d d f . . . . 
         `],
     200,
     false
@@ -231,81 +306,6 @@ controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
         `],
     200,
     true
-    )
-})
-sprites.onOverlap(SpriteKind.Player, SpriteKind.Projectile, function (sprite, otherSprite) {
-    otherSprite.destroy(effects.confetti, 100)
-    music.baDing.play()
-    info.changeScoreBy(1)
-    if (tiempo > 500) {
-        tiempo += -500
-    }
-})
-controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
-    animation.runImageAnimation(
-    hero,
-    [img`
-        . . . . . . f f f f . . . . . . 
-        . . . . f f d d d d f f . . . . 
-        . . . f d d d d d d d d f . . . 
-        . . f d d d d d d d d d d f . . 
-        . . f d d d d d d d d d d f . . 
-        . . f d d d d d d d d d d f . . 
-        . . f d d d d d d d d d d f . . 
-        . f f d d d d d d d d d d f f . 
-        . f d d d d d d d d d d d d f . 
-        . f d d d d d d d d d d d d f . 
-        . f d d d d d d d d d d d d f . 
-        . f d d d d d d d d d d d d f . 
-        . f d d f f f f f f f f d d f . 
-        . f d d f d d f f d d f d d f . 
-        . f f f f d d f f d d f f f f . 
-        . . . . f d d f f d d f . . . . 
-        `],
-    200,
-    true
-    )
-})
-controller.right.onEvent(ControllerButtonEvent.Released, function () {
-    animation.runImageAnimation(
-    hero,
-    [img`
-        . . . . . . f f f f . . . . . . 
-        . . . . f f d d d d f f . . . . 
-        . . . f d d d d d d d d f . . . 
-        . . f d d d d d d d d d d f . . 
-        . . f d d d d d d f f f d f . . 
-        . . f d d d d d d d d d d f . . 
-        . . f f d d d d d d d 1 1 f . . 
-        . . . f f f d d d d d 1 1 f f . 
-        . . f d d d f f f f f f f d f . 
-        . . f d d d d d d d d d d d f . 
-        . . f d d d d d d d d f d d f . 
-        . . f d d d d d d d d f d f f . 
-        . . f f d d d d d d d f f d f . 
-        . . . f d d d d d d d d d d f . 
-        . . . f d d d d d d d f f f . . 
-        . . . . f f f f f d d f . . . . 
-        `,img`
-        . . . . . . f f f f . . . . . . 
-        . . . . f f d d d d f f . . . . 
-        . . . f d d d d d d d d f . . . 
-        . . f d d d d d d d d d d f . . 
-        . . f d d d d d d f f f d f . . 
-        . . f d d d d d d d d d d f . . 
-        . . f f d d d d d d d 1 1 f . . 
-        . . f f f f d d d d d 1 1 f f . 
-        . . f d d d f f f f f f f d f . 
-        . . f d d d d d d d d d d d f . 
-        . . f d d d d d d d d f d d f . 
-        . . f d d d d d d d d f d f f . 
-        . . f f d d d d d d d f f d f . 
-        . . . f d d d d d d d d d d f . 
-        . . . f d d d d d d d f f f . . 
-        . . . . f d d f f f f f . . . . 
-        `],
-    200,
-    false
     )
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
